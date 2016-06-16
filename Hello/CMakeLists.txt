@@ -4,8 +4,8 @@
 #   cmake -G "Unix Makefiles" ../Hello/
 #   make
 
-cmake_minimum_required (VERSION 2.8.11)
-project (HELLO)
+#cmake_minimum_required (VERSION 2.8.11)
+#project (HELLO)
 
 # Example from:
 #   https://cmake.org/examples/
