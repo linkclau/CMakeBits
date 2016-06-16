@@ -24,3 +24,7 @@ set_target_properties(simplelib_static PROPERTIES OUTPUT_NAME simplelib)
 # Objects can't be dependencies.
 #add_library (simplelib_other SHARED simplelib.o)
 
+# Define the include directory for usage through CMake from other projects
+# THis needs to be done after the target is defined.
+target_include_directories (simplelib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
