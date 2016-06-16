@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 2.8.8)
+
 # Example from:
 #   http://stackoverflow.com/questions/2152077/is-it-possible-to-get-cmake-to-build-both-a-static-and-shared-version-of-the-sam
 # Doing it like this it turns out every targes has it's complete own set of objects
