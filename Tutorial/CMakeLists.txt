@@ -4,6 +4,12 @@ project (Tutorial)
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
 
+# should we use our own math functions?
+option (USE_MYMATH "Use tutorial provided math implementation" ON) 
+# Options can be switche when generating the build files (-G) via
+#  -DUSE_MYMATH=[yes/no|on/off|true/false|1/0] 
+
+ 
 # configure a header file to pass some of the CMake settings
 # to the source code
 ## Is there no naming convention? Can I use any two files?
@@ -16,10 +22,14 @@ configure_file (
 # so that we will find TutorialConfig.h
 include_directories("${PROJECT_BINARY_DIR}")
 
-## From the nameing I would expect this to override the previous setting
-include_directories ("${PROJECT_SOURCE_DIR}/MathFunctions")
-add_subdirectory (MathFunctions) 
-
+# add the MathFunctions library?
+if (USE_MYMATH)
+  ## From the naming I would expect this to override the previous setting
+  include_directories ("${PROJECT_SOURCE_DIR}/MathFunctions")
+  add_subdirectory (MathFunctions)
+  set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
+endif (USE_MYMATH)
+ 
 # add the executable
-add_executable(Tutorial tutorial.cxx)
-target_link_libraries (Tutorial MathFunctions)
+add_executable (Tutorial tutorial.cxx)
+target_link_libraries (Tutorial  ${EXTRA_LIBS})
