@@ -24,3 +24,11 @@ Actually this is a nice Make Idiom
 If VERBOSE is not set the .SILENT option is activated.
 If verbos is set, the option becomens <Whatever>.SILENT 
 which is not known to Make and therfore ignored.
+
+Use Clang and the compiler
+
+  cmake -G "Unix Makefiles" \
+    -DCMAKE_CXX_COMPILER=clang++-3.7 \
+    -DCMAKE_CC_COMPILER=clang-3.7 \
+    ..
+
