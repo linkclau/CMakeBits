@@ -36,3 +36,11 @@ Build different modes
    -DCMAKE_BUILD_TYPE=Debug ..
 
 
+##########################################################
+# CTest
+##########################################################
+Feels a bit basic and applicable only in theory, 
+for more or less trivial programms.
+Addapting a program to the way ctest works is IMHO the same order of
+magnitude like adding Unit Tests.
+But you pay the performace overhead of executing the programm again and again.
