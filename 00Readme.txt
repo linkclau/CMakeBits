@@ -32,3 +32,7 @@ Use Clang and the compiler
     -DCMAKE_CC_COMPILER=clang-3.7 \
     ..
 
+Build different modes
+   -DCMAKE_BUILD_TYPE=Debug ..
+
+
