@@ -63,6 +63,9 @@ include(CTest)
  
  
 # does the application run 
+# verifies that the application runs, 
+# does not segfault or otherwise crash, 
+# and has a zero return value
 add_test (TutorialRuns tutorial 25) 
 # does it sqrt of 25 
 add_test (TutorialComp25 tutorial 25) 
