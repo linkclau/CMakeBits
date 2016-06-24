@@ -35,7 +35,9 @@ add_executable (tutorial tutorial.cxx)
 target_link_libraries (tutorial  ${EXTRA_LIBS})
 
 
-# install
+############################################################
+# Install
+############################################################
 # add the install targets
 # Generating the build files you can specify the prefix through 
 #   CMAKE_INSTALL_PREFIX
@@ -53,3 +55,28 @@ target_link_libraries (tutorial  ${EXTRA_LIBS})
 #   /tmp/xyz/
 install (TARGETS tutorial DESTINATION bin)
 install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
+
+############################################################
+# Test
+############################################################
+include(CTest)
+ 
+ 
+# does the application run 
+add_test (TutorialRuns tutorial 25) 
+# does it sqrt of 25 
+add_test (TutorialComp25 tutorial 25) 
+set_tests_properties (TutorialComp25 PROPERTIES 
+    PASS_REGULAR_EXPRESSION "25 is 5") 
+# does it handle negative numbers 
+add_test (TutorialNegative tutorial -25) 
+set_tests_properties (TutorialNegative PROPERTIES 
+    PASS_REGULAR_EXPRESSION "-25 is 0") 
+# does it handle small numbers 
+add_test (TutorialSmall tutorial 0.0001) 
+set_tests_properties (TutorialSmall PROPERTIES 
+    PASS_REGULAR_EXPRESSION "0.0001 is 0.01") 
+# does the usage message work? 
+add_test (TutorialUsage tutorial) 
+set_tests_properties (TutorialUsage PROPERTIES 
+    PASS_REGULAR_EXPRESSION "Usage:.*number")
