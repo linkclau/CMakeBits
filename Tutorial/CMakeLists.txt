@@ -84,6 +84,5 @@ test_if_sqrt_matches( 25 "25 is 5")
 # does it handle small numbers 
 test_if_sqrt_matches( 0.0001 "0.0001 is 0.01")
 # does the usage message work? 
-add_test (TutorialUsage tutorial) 
-set_tests_properties (TutorialUsage PROPERTIES 
-    PASS_REGULAR_EXPRESSION "Usage:.*number")
+# Empty strings are not passed as args  to the SUT
+test_if_sqrt_matches( "" "Usage:.*number")
