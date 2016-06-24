@@ -44,6 +44,11 @@ target_link_libraries (tutorial  ${EXTRA_LIBS})
 # With unix Makefiles you can set the destination 
 # under which the prefix is rooted. E.g.:
 #   DESTDIR=/tmp make install
+# or
+#   make DESTDIR=/tmp install
+# ??? I wonder what is the difference? 
+# ??? I uspsect the first is passed to recursive make call 
+# ??? as it is part of the environment
 # which would lead to an install under
 #   /tmp/xyz/
 install (TARGETS tutorial DESTINATION bin)
