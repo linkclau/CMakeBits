@@ -62,6 +62,7 @@ install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
 include(CTest)
  
 #define a macro to simplify adding tests, then use it
+# ??? What about multiline output?
 macro (test_if_sqrt_matches arg result)
   add_test (TutorialComp_${arg} tutorial ${arg})
   set_tests_properties (TutorialComp_${arg}
