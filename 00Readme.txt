@@ -1,5 +1,3 @@
-
-
 After creating the configuration for the generator. E.g. with
 
   cmake -G "Unix Makefiles"  ..
@@ -24,3 +22,6 @@ If VERBOSE is not set the .SILENT option is activated.
 If verbos is set, the option becomens <Whatever>.SILENT which is not known to Make
 and therfore ignored.
   
+TO build the subprojects
+   (cd build/ &&  cmake -G "Unix Makefiles" .. && make)
+
