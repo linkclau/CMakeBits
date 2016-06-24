@@ -69,21 +69,27 @@ macro (test_if_sqrt_matches arg result)
     PROPERTIES PASS_REGULAR_EXPRESSION ${result})
 endmacro (test_if_sqrt_matches)
  
+macro (test_if_sqrt_is arg result)
+  test_if_sqrt_matches( ${arg} "${arg} is ${result}")
+endmacro (test_if_sqrt_is arg result)
+
 # does the application run 
 # verifies that the application runs, 
 # does not segfault or otherwise crash, 
 # and has a zero return value
 # ??? Not sure if this is the same on Windows
 add_test (TutorialRuns tutorial 25) 
+
 # does it sqrt of 25 
-test_if_sqrt_matches( 25 "25 is 5")
+test_if_sqrt_is( 25 5 )
 
 # does it handle negative numbers 
 # Intentionally fail
 # test_if_sqrt_matches( -25 "-25 is 0")
 
 # does it handle small numbers 
-test_if_sqrt_matches( 0.0001 "0.0001 is 0.01")
+test_if_sqrt_is( 0.0001 0.01 )
+
 # does the usage message work? 
 # Empty strings are not passed as args  to the SUT
 test_if_sqrt_matches( "" "Usage:.*number")
