@@ -85,11 +85,12 @@ test_if_sqrt_is( 25 5 )
 
 # does it handle negative numbers 
 # Intentionally fail
-# test_if_sqrt_matches( -25 "-25 is 0")
+test_if_sqrt_is( -25 0 )
 
 # does it handle small numbers 
 test_if_sqrt_is( 0.0001 0.01 )
 
 # does the usage message work? 
 # Empty strings are not passed as args  to the SUT
+# Adding a space would pass it to the SUT
 test_if_sqrt_matches( "" "Usage:.*number")
