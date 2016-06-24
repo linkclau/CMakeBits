@@ -4,3 +4,6 @@ project ( CMakeBits )
 add_subdirectory (Hello)
 add_subdirectory (SimpleLib)
 add_subdirectory (UseSimpleLib )
+
+#include_directories("SimpleLib")
+include_directories ("${PROJECT_SOURCE_DIR}/SimpleLib")
