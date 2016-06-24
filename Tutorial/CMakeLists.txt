@@ -66,6 +66,7 @@ include(CTest)
 # verifies that the application runs, 
 # does not segfault or otherwise crash, 
 # and has a zero return value
+# ??? Not sure if this is the same on Windows
 add_test (TutorialRuns tutorial 25) 
 # does it sqrt of 25 
 add_test (TutorialComp25 tutorial 25) 
