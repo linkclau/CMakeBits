@@ -31,5 +31,5 @@ if (USE_MYMATH)
 endif (USE_MYMATH)
  
 # add the executable
-add_executable (Tutorial tutorial.cxx)
-target_link_libraries (Tutorial  ${EXTRA_LIBS})
+add_executable (tutorial tutorial.cxx)
+target_link_libraries (tutorial  ${EXTRA_LIBS})
