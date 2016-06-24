@@ -33,3 +33,18 @@ endif (USE_MYMATH)
 # add the executable
 add_executable (tutorial tutorial.cxx)
 target_link_libraries (tutorial  ${EXTRA_LIBS})
+
+
+# install
+# add the install targets
+# Generating the build files you can specify the prefix through 
+#   CMAKE_INSTALL_PREFIX
+# (default is /usr/local) E.g.:
+#   cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=/xyz ..
+# With unix Makefiles you can set the destination 
+# under which the prefix is rooted. E.g.:
+#   DESTDIR=/tmp make install
+# which would lead to an install under
+#   /tmp/xyz/
+install (TARGETS tutorial DESTINATION bin)
+install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
