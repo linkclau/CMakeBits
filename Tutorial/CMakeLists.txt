@@ -4,9 +4,9 @@ project (Tutorial)
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
 
- 
 # configure a header file to pass some of the CMake settings
 # to the source code
+## Is there no naming convention? Can I use any two files?
 configure_file (
   "${PROJECT_SOURCE_DIR}/TutorialConfig.h.in"
   "${PROJECT_BINARY_DIR}/TutorialConfig.h"
