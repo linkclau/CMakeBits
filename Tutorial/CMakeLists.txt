@@ -62,11 +62,11 @@ install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
 include(CTest)
  
 #define a macro to simplify adding tests, then use it
-macro (do_test arg result)
+macro (test_if_sqrt_matches arg result)
   add_test (TutorialComp_${arg} tutorial ${arg})
   set_tests_properties (TutorialComp_${arg}
     PROPERTIES PASS_REGULAR_EXPRESSION ${result})
-endmacro (do_test)
+endmacro (test_if_sqrt_matches)
  
 # does the application run 
 # verifies that the application runs, 
@@ -75,14 +75,14 @@ endmacro (do_test)
 # ??? Not sure if this is the same on Windows
 add_test (TutorialRuns tutorial 25) 
 # does it sqrt of 25 
-do_test( 25 "25 is 5")
+test_if_sqrt_matches( 25 "25 is 5")
 
 # does it handle negative numbers 
 # Intentionally fail
-# do_test( -25 "-25 is 0")
+# test_if_sqrt_matches( -25 "-25 is 0")
 
 # does it handle small numbers 
-do_test( 0.0001 "0.0001 is 0.01")
+test_if_sqrt_matches( 0.0001 "0.0001 is 0.01")
 # does the usage message work? 
 add_test (TutorialUsage tutorial) 
 set_tests_properties (TutorialUsage PROPERTIES 
