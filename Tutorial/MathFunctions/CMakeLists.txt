@@ -1,3 +1,5 @@
+project (MathFunctions)
+
 # does this system provide the log and exp functions?
 include (CheckFunctionExists)
 check_function_exists (log HAVE_LOG)
