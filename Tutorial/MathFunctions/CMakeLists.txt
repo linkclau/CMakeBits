@@ -11,6 +11,7 @@ include (CheckFunctionExists)
 # APPLE 
 #  is TRUE on Apple systems. 
 #   Note this does not imply the system is Mac OS X
+#   Check IF(${CMAKE_SYSTEM_NAME} MATCHES "Darwin") for Mac OS X
 IF(UNIX)
   #set(CMAKE_REQUIRED_INCLUDES "math.h")
   set(CMAKE_REQUIRED_LIBRARIES "m")
