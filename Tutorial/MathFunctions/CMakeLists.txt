@@ -10,7 +10,7 @@ configure_file (
   "${PROJECT_BINARY_DIR}/MathFunctionsConfig.h"
   )
 # We need this to find the generated header file
-include_directories("${PROJECT_BINARY_DIR}")
+include_directories("${PROJECT_BINARY_DIR}/")
 
 add_library(MathFunctions mysqrt.cxx)
 
