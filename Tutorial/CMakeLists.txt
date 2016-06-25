@@ -106,7 +106,9 @@ set (CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
 # CPACK_PACKAGE_CONTACT or CPACK_DEBIAN_PACKAGE_MAINTAINER
 set (CPACK_PACKAGE_CONTACT "claudius.link@gmail.com")
 
-## Other variables ???
+# Other variables ???
+# RPM https://cmake.org/cmake/help/v3.0/module/CPackRPM.html
+# DEB https://cmake.org/cmake/help/v3.0/module/CPackDeb.html
 
 # Show the description
 #    rpm -qi -p Tutorial-1.0.1-Linux.rpm 
