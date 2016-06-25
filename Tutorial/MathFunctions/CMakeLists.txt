@@ -1,4 +1,4 @@
-project (MathFunctions)
+#project (MathFunctions)
 
 # does this system provide the log and exp functions?
 include (CheckFunctionExists)
@@ -20,11 +20,14 @@ check_function_exists (log HAVE_LOG)
 check_function_exists (exp HAVE_EXP)
 
 configure_file (
-  "${PROJECT_SOURCE_DIR}/MathFunctionsConfig.h.in"
-  "${PROJECT_BINARY_DIR}/MathFunctionsConfig.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/MathFunctionsConfig.h.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/MathFunctionsConfig.h"
   )
 # We need this to find the generated header file
-include_directories("${PROJECT_BINARY_DIR}/")
+#include_directories("${PROJECT_BINARY_DIR}/")
+# add the binary tree directory to the search path for 
+# include files
+include_directories( ${CMAKE_CURRENT_BINARY_DIR} )
 
 # first we add the executable that generates the table
 add_executable(MakeTable MakeTable.cxx)
@@ -36,9 +39,6 @@ add_custom_command (
   DEPENDS MakeTable
   )
  
-# add the binary tree directory to the search path for 
-# include files
-include_directories( ${CMAKE_CURRENT_BINARY_DIR} )
  
 # add the main library
 add_library(MathFunctions mysqrt.cxx ${CMAKE_CURRENT_BINARY_DIR}/Table.h )
