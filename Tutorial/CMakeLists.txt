@@ -94,3 +94,12 @@ test_if_sqrt_is( 0.0001 0.01 )
 # Empty strings are not passed as args  to the SUT
 # Adding a space would pass it to the SUT
 test_if_sqrt_matches( "" "Usage:.*number")
+
+
+# build a CPack driven installer package
+include (InstallRequiredSystemLibraries)
+set (CPACK_RESOURCE_FILE_LICENSE  
+     "${CMAKE_CURRENT_SOURCE_DIR}/license.txt")
+set (CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
+set (CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
+include (CPack)
