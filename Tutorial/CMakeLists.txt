@@ -104,15 +104,29 @@ set (CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
 set (CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
 # Debian requires (RPM doesnT require it)
 # CPACK_PACKAGE_CONTACT or CPACK_DEBIAN_PACKAGE_MAINTAINER
-#
-## Other variables ???
-## Show the description
-##    rpm -qi -p Tutorial-1.0.1-Linux.rpm 
-##    dpkg -I Tutorial-1.0.1-Linux.deb 
-##
-## List files
-##    rpm -qp Tutorial-1.0.1-Linux.rpm -l
-##    dpkg -c  Tutorial-1.0.1-Linux.deb 
-##
 set (CPACK_PACKAGE_CONTACT "claudius.link@gmail.com")
+
+## Other variables ???
+
+# Show the description
+#    rpm -qi -p Tutorial-1.0.1-Linux.rpm 
+#    dpkg -I Tutorial-1.0.1-Linux.deb 
+#
+# List files
+#    rpm -qp Tutorial-1.0.1-Linux.rpm -l
+#    dpkg -c  Tutorial-1.0.1-Linux.deb 
+#
+# Multiple packages can be build through components
+# cpack_add_component(runtime DISPLAY_NAME runtime 
+#      REQUIRED INSTALL_TYPES all)
+#
+# see
+#    http://www.cmake.org/Wiki/CMake:Component_Install_With_CPack
+# For rpm I had to set this:
+#    SET(CPACK_RPM_COMPONENT_INSTALL     "ON" 
+# For deb it should be explained at
+#   http://www.cmake.org/Wiki/CMake:Component_Install_With_CPack
+#
+# Source of the information:
+#   http://cmake.3232098.n2.nabble.com/Generating-multiple-debian-packages-td7581086.html
 include (CPack)
