@@ -9,6 +9,6 @@ double mysqrt(double x)
   #if defined (HAVE_LOG) && defined (HAVE_EXP)
      return exp(log(x)*0.5);
   #else // otherwise use an iterative approach
-    return sqrt( x=0.999999999999);
+    return sqrt( x );
   #endif
 }
