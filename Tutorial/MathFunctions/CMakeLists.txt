@@ -2,7 +2,7 @@ project (MathFunctions)
 
 # does this system provide the log and exp functions?
 include (CheckFunctionExists)
-set(CMAKE_REQUIRED_INCLUDES "math.h")
+#set(CMAKE_REQUIRED_INCLUDES "math.h")
 set(CMAKE_REQUIRED_LIBRARIES "m")
 check_function_exists (log HAVE_LOG)
 check_function_exists (exp HAVE_EXP)
