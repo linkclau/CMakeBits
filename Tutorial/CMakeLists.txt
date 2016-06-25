@@ -102,4 +102,17 @@ set (CPACK_RESOURCE_FILE_LICENSE
      "${CMAKE_CURRENT_SOURCE_DIR}/license.txt")
 set (CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
 set (CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
+# Debian requires (RPM doesnT require it)
+# CPACK_PACKAGE_CONTACT or CPACK_DEBIAN_PACKAGE_MAINTAINER
+#
+## Other variables ???
+## Show the description
+##    rpm -qi -p Tutorial-1.0.1-Linux.rpm 
+##    dpkg -I Tutorial-1.0.1-Linux.deb 
+##
+## List files
+##    rpm -qp Tutorial-1.0.1-Linux.rpm -l
+##    dpkg -c  Tutorial-1.0.1-Linux.deb 
+##
+set (CPACK_PACKAGE_CONTACT "claudius.link@gmail.com")
 include (CPack)

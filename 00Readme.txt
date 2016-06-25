@@ -44,3 +44,12 @@ for more or less trivial programms.
 Addapting a program to the way ctest works is IMHO the same order of
 magnitude like adding Unit Tests.
 But you pay the performace overhead of executing the programm again and again.
+
+
+  cpack --config CPackConfig.cmake -G DEB
+
+  cpack --help
+
+shows the supported generators.
+
+
