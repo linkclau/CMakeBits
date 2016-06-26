@@ -13,6 +13,9 @@ Things to figure out
 Hints:
 https://cmake.org/pipermail/cmake/2011-October/046562.html
 
+The referenced example:
+https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/
+https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/CMakeLists.txt
 
 
 ############################################
