@@ -1,0 +1,26 @@
+Things to figure out
+
+############################################
+# Third Party Libs
+############################################
+
+1. Use installed 3rd party libs. Determine the settings necessary for that
+    E.g. Include path, libraries, ...
+2. Fail if the are not available
+3. Build them if not installed (CMake)
+3. Build them if not installed (autoconf / make / whatever )
+
+Hints:
+https://cmake.org/pipermail/cmake/2011-October/046562.html
+
+
+
+############################################
+# File wildcards
+############################################
+
+Automaticalle select files (all in a directory)
+Whatever regexp necessary.
+
+Hint:
+http://stackoverflow.com/questions/2110795/how-to-find-all-c-files-for-cmake-build-system
