@@ -17,6 +17,9 @@ The referenced example:
 https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/
 https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/CMakeLists.txt
 
+See also the modules files from the cmake-data package
+E.g. /usr/share/cmake-3.5/Modules/FindOpenSSL.cmake
+
 
 ############################################
 # File wildcards
@@ -27,3 +30,28 @@ Whatever regexp necessary.
 
 Hint:
 http://stackoverflow.com/questions/2110795/how-to-find-all-c-files-for-cmake-build-system
+
+
+
+############################################
+# Build external projects
+############################################
+Using whatever build tooling they provide
+E.g. 
+mak
+autoconf + make
+....
+
+References
+http://www.kitware.com/media/html/BuildingExternalProjectsWithCMake2.8.html
+http://stackoverflow.com/questions/15175318/cmake-how-to-build-external-projects-and-include-their-targets
+https://cmake.org/cmake/help/v2.8.10/cmake.html#module%3aExternalProject
+
+
+############################################
+# Configure custom build types
+############################################
+
+BUILD_TYPE
+
+https://cmake.org/Wiki/CMake_FAQ#How_can_I_extend_the_build_modes_with_a_custom_made_one_.3F
