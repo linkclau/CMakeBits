@@ -55,3 +55,8 @@ https://cmake.org/cmake/help/v2.8.10/cmake.html#module%3aExternalProject
 BUILD_TYPE
 
 https://cmake.org/Wiki/CMake_FAQ#How_can_I_extend_the_build_modes_with_a_custom_made_one_.3F
+
+
+############################################
+# Build FIle Documentation
+############################################
