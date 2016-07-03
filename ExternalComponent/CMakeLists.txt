@@ -18,6 +18,6 @@ message( "SOURCE_DIR ${CMAKE_SOURCE_DIR}/SimpleMake/ ")
 ExternalProject_Add( SimpleMake
   DOWNLOAD_COMMAND "" 
   SOURCE_DIR ${CMAKE_SOURCE_DIR}/SimpleMake
-
-  CONFIGURE_CMD " "
+  CONFIGURE_COMMAND ""
+  BUILD_IN_SOURCE 1
 )
