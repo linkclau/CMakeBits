@@ -20,4 +20,6 @@ ExternalProject_Add( SimpleMake
   SOURCE_DIR ${CMAKE_SOURCE_DIR}/SimpleMake
   CONFIGURE_COMMAND ""
   BUILD_IN_SOURCE 1
+  # Don't install
+  INSTALL_COMMAND ""
 )
