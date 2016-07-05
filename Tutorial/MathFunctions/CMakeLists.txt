@@ -19,6 +19,10 @@ ENDIF(UNIX)
 check_function_exists (log HAVE_LOG)
 check_function_exists (exp HAVE_EXP)
 
+# Check if a function exists in a certain library
+include(CheckLibraryExists)
+check_library_exists(rt clock_gettime "time.h" HAVE_CLOCK_GETTIME)
+
 configure_file (
   "${CMAKE_CURRENT_SOURCE_DIR}/MathFunctionsConfig.h.in"
   "${CMAKE_CURRENT_BINARY_DIR}/MathFunctionsConfig.h"
