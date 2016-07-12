@@ -25,6 +25,8 @@ If VERBOSE is not set the .SILENT option is activated.
 If verbos is set, the option becomens <Whatever>.SILENT 
 which is not known to Make and therfore ignored.
 
+   (cd build/ &&  cmake -G "Unix Makefiles" .. && make)
+
 Use Clang and the compiler
 
   cmake -G "Unix Makefiles" \

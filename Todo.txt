@@ -17,6 +17,9 @@ The referenced example:
 https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/
 https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/CMakeLists.txt
 
+OpenSSL example
+http://www.simple-pc.de/cmake-und-openssl-ein-beispiel/
+
 See also the modules files from the cmake-data package
 E.g. /usr/share/cmake-3.5/Modules/FindOpenSSL.cmake
 
