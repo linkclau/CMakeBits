@@ -3,3 +3,4 @@ syntax: glob
 *_build/
 build_*/
 build/
+ExternalComponent/thrift-*
