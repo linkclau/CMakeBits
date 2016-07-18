@@ -23,6 +23,6 @@ SET( Minzip_HEADER ioapi.h unzip.h zip.h )
 add_library(minzip ioapi.c unzip.c zip.c ${Minzip_HEADER} )
 
 install (TARGETS minzip DESTINATION lib)
-install (FILES MathFunctions.h DESTINATION include)
+install (FILES ${Minzip_HEADER} DESTINATION include)
 
 
