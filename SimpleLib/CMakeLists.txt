@@ -15,6 +15,9 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 # The syntax is a bit archaic
 add_library(simplelib_objects OBJECT simplelib.cpp simplelib_base.cpp)
 
+# The  $<TARGET_OBJECTS:*> is a generator-expressions
+# See
+#   https://cmake.org/cmake/help/v3.0/manual/cmake-generator-expressions.7.html
 add_library (simplelib_default $<TARGET_OBJECTS:simplelib_objects>)
 add_library (simplelib SHARED $<TARGET_OBJECTS:simplelib_objects>)
 add_library (simplelib_static STATIC $<TARGET_OBJECTS:simplelib_objects>)
