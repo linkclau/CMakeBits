@@ -7,3 +7,6 @@ ExternalComponent/thrift*
 ExternalComponent/googletest/
 ExternalComponent/*.zip
 ExternalComponent/zlib*
+ExternalComponent/yaml-cpp
+ExternalComponent/googletest*
+ExternalComponent/boost/

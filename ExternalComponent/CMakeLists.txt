@@ -13,6 +13,8 @@ set_property(DIRECTORY PROPERTY EP_STEP_TARGETS configure build test)
 #  INSTALL_DIR /tmp/thrift-0.9.3
 #  INSTALL_COMMAND echo Install manually 
 #  )
+# Thrift caused an error as the CMakeLists.txt used CPP (instead of CXX)
+# as language.
 add_subdirectory( thrift )
 
 message( "SOURCE_DIR ${CMAKE_SOURCE_DIR}/SimpleMake/ ")
