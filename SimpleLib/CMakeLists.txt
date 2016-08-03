@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.8)
+cmake_minimum_required(VERSION 2.8.11)
 
 # Example from:
 #   http://stackoverflow.com/questions/2152077/is-it-possible-to-get-cmake-to-build-both-a-static-and-shared-version-of-the-sam
@@ -13,18 +13,18 @@ cmake_minimum_required(VERSION 2.8.8)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 
 # The syntax is a bit archaic
-add_library(simplelib_objects OBJECT simplelib.cpp simplelib_base.cpp)
+add_library(simpleLib_objects OBJECT simplelib.cpp simplelib_base.cpp)
 
-add_library (simplelib_default $<TARGET_OBJECTS:simplelib_objects>)
-add_library (simplelib SHARED $<TARGET_OBJECTS:simplelib_objects>)
-add_library (simplelib_static STATIC $<TARGET_OBJECTS:simplelib_objects>)
+add_library (simpleLib_default $<TARGET_OBJECTS:simpleLib_objects>)
+add_library (simpleLib SHARED $<TARGET_OBJECTS:simpleLib_objects>)
+add_library (simpleLib_static STATIC $<TARGET_OBJECTS:simpleLib_objects>)
 # Set the name to match the dynamic name
-set_target_properties(simplelib_static PROPERTIES OUTPUT_NAME simplelib)
+set_target_properties(simpleLib_static PROPERTIES OUTPUT_NAME simpleLib)
 
 # Objects can't be dependencies.
-#add_library (simplelib_other SHARED simplelib.o)
+#add_library (simpleLib_other SHARED simpleLib.o)
 
 # Define the include directory for usage through CMake from other projects
-# THis needs to be done after the target is defined.
-target_include_directories (simplelib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+# This needs to be done after the target is defined.
+target_include_directories (simpleLib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
