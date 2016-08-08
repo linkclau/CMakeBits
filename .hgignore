@@ -10,3 +10,4 @@ ExternalComponent/zlib*
 ExternalComponent/yaml-cpp
 ExternalComponent/googletest*
 ExternalComponent/boost/
+ExternalComponent/minzip
