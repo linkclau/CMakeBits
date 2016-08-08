@@ -36,4 +36,8 @@ ExternalProject_Add( re2
   INSTALL_DIR /tmp/re2-2016-07-01
 )
 
+ExternalProject_Add( libzip
+  HG_REPOSITORY http://hg.nih.at/libzip/
+  HG_TAG rel-1-1-3
+)
 add_subdirectory ( googletest )
