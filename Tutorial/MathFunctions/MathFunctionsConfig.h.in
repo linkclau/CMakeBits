@@ -1,0 +1,5 @@
+#include <cmath>
+
+// does the platform provide exp and log functions?
+#cmakedefine HAVE_LOG
+#cmakedefine HAVE_EXP

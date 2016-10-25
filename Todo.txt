@@ -1,0 +1,65 @@
+Things to figure out
+
+############################################
+# Third Party Libs
+############################################
+
+1. Use installed 3rd party libs. Determine the settings necessary for that
+    E.g. Include path, libraries, ...
+2. Fail if the are not available
+3. Build them if not installed (CMake)
+3. Build them if not installed (autoconf / make / whatever )
+
+Hints:
+https://cmake.org/pipermail/cmake/2011-October/046562.html
+
+The referenced example:
+https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/
+https://sourceforge.net/p/brlcad/code/HEAD/tree/brlcad/trunk/src/other/CMakeLists.txt
+
+OpenSSL example
+http://www.simple-pc.de/cmake-und-openssl-ein-beispiel/
+
+See also the modules files from the cmake-data package
+E.g. /usr/share/cmake-3.5/Modules/FindOpenSSL.cmake
+
+
+############################################
+# File wildcards
+############################################
+
+Automaticalle select files (all in a directory)
+Whatever regexp necessary.
+
+Hint:
+http://stackoverflow.com/questions/2110795/how-to-find-all-c-files-for-cmake-build-system
+
+
+
+############################################
+# Build external projects
+############################################
+Using whatever build tooling they provide
+E.g. 
+mak
+autoconf + make
+....
+
+References
+http://www.kitware.com/media/html/BuildingExternalProjectsWithCMake2.8.html
+http://stackoverflow.com/questions/15175318/cmake-how-to-build-external-projects-and-include-their-targets
+https://cmake.org/cmake/help/v2.8.10/cmake.html#module%3aExternalProject
+
+
+############################################
+# Configure custom build types
+############################################
+
+BUILD_TYPE
+
+https://cmake.org/Wiki/CMake_FAQ#How_can_I_extend_the_build_modes_with_a_custom_made_one_.3F
+
+
+############################################
+# Build FIle Documentation
+############################################
